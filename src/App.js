@@ -141,6 +141,11 @@ const App = () => {
     });
   };
 
+  const deleteContact = (id) => {
+    // db.collection("users").doc(id).delete();
+    console.log(id);
+  };
+
   return (
     <div className="App">
       <div id="form-format">
@@ -251,7 +256,7 @@ const App = () => {
               <h1>Contactos</h1>
 
               {allUsers.map((user) => (
-                <Card style={{ width: "18rem", color: "black" }}>
+                <Card style={{ color: "black" }}>
                   <Card.Body>
                     <Card.Title>
                       {user.firstName} {user.lastName}
@@ -265,6 +270,9 @@ const App = () => {
                         <li>{user.email}</li>
                       </ul>
                     </Card.Text>
+                    <Button variant="danger" onClick={deleteContact(user.id)}>
+                      Delete
+                    </Button>
                   </Card.Body>
                 </Card>
               ))}
