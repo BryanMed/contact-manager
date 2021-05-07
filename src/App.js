@@ -142,8 +142,11 @@ const App = () => {
   };
 
   const deleteContact = (id) => {
-    // db.collection("users").doc(id).delete();
-    console.log(id);
+    db.collection("users").doc(id).delete();
+  };
+
+  const isFormValid = () => {
+    return firstNameIsValid && lastNameIsValid && emailIsValid;
   };
 
   return (
@@ -246,7 +249,12 @@ const App = () => {
                     {emailValidMsg}
                   </div>
                 </Form.Group>
-                <Button variant="primary" type="submit" onClick={addUser}>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  disabled={!isFormValid()}
+                  onClick={addUser}
+                >
                   Add new contact
                 </Button>
               </Form>
@@ -270,7 +278,10 @@ const App = () => {
                         <li>{user.email}</li>
                       </ul>
                     </Card.Text>
-                    <Button variant="danger" onClick={deleteContact(user.id)}>
+                    <Button
+                      variant="danger"
+                      onClick={() => deleteContact(user.id)}
+                    >
                       Delete
                     </Button>
                   </Card.Body>
