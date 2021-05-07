@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Contact manager app [**work in progress**]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is deployed in heroku, and you can test it [💻 here!](https://bryan-contact-manager.herokuapp.com/)
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+Firebase + React + Bootstrap
 
-### `npm start`
+## Scope
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Unfortunately, this work is still in progress. The app is supposed to meet the next requirements for a contacts app:
+I'll mark what this app can do:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+- 🟡--name (required).
+  - Only text, not numbers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🙋‍♂️ Warns the user that the input is not correct. But submit wrong data anyway.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🟡--last name (required)
+  - Only text, not numbers.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🙋‍♂️ Warns the user that the input is not correct. But submit wrong data anyway
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+- 🟡--company (optional)
+  - Alphanumeric.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🙋‍♂️ Warns the user that the input is not correct. But submit wrong data anyway
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- 🟡--phone number (optional)
+  - Numeric.
+  - Phone numbers must be unique between contacts.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🙋‍♂️ Warns the user that the input is not correct. But submit wrong data anyway
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 🟡--email (required)
+  - Email must be unique between contacts.
+  - Email must be a valid email.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🙋‍♂️ Warns the user that the input is not correct. But submit wrong data anyway
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🔴 --Displays all your contacts with pagination (10 contacts per page).
 
-### Analyzing the Bundle Size
+🙋‍♂️ I didn't implement this feature yet.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+- 🟡--You can save, edit, delete a contact.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🙋‍♂️ I could only implement the saving user data part. Editing and deleting the data caused all the data to be deleted.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 🟢 --Deployed in Heroku.
 
-### Deployment
+🙋‍♂️ You can try the app [here](<(https://bryan-contact-manager.herokuapp.com/)>)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+- Nice to have:
+  - 🔴 Filter by name and last name (full or partial match).
+  - 🟢 Use a CSS Framework. https://geekflare.com/best-css-frameworks/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🙋‍♂️ I haven't implemented the filters yet.
+
+🙋‍♂️ First I tried with Material UI, but i had hard times getting the things work. At last minute I changed the project onto Bootstrap.
+
+---
+
+## My situation
+
+Unfortunately, I followed the wrong tutorials, which caused me to switch the technology stack several times. In the case of the database, I had problems getting MySQL to work on my computer, and I could not understand it well, this made me switch to Firebase which I think I understand much better. On the other hand, I was trying to work with Material UI, but it was hard to understand for me, and I was feeling like if i was reinventing the wheel, using Bootstrap felt so much better.
+
+I made the mistake of not taking good advantage of my mentors, they were always willing to help me, but I wanted to learn from the tutorials, in order to ask them more specific questions. So at the end that was my failure.
+
+## Future work
+
+I will definitely finish this app. My practical knowledge of react and database management was almost nil until this project. But now I am motivated, because I learned a lot. And finally I did something that made me very excited, which was to deploy an application that I could share with my friends.
